@@ -1,0 +1,46 @@
+doctype
+html
+  head
+    title #{title}
+    link(rel='stylesheet', href='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css')
+    script( type="text/javascript", src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" )
+    script( type="text/javascript", src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js" )
+
+    link(rel='stylesheet', href='/stylesheets/boot.css')
+  body
+    .jumbotron
+      block jumbotron
+    .container
+      block content
+      .row
+        .col-sm-2
+          block left
+        .col-sm-8
+
+            ul#myTab.nav.nav-tabs
+              li.active
+                a(data-toggle='tab', href='#tab-one') What is it?
+              li
+                a(data-toggle='tab', href='#tab-two') Why use it?
+              li
+                a(data-toggle='tab', href='#tab-three') Where does it come from? 
+              li
+                a(data-toggle='tab', href='#tab-four') Where can I get some?
+              li
+                a(data-toggle='tab', href='#tab-five') Lorem Ipsum
+
+            .tab-content
+              br
+              #tab-one.box.tab-pane.in.active
+                block tab-one 
+              #tab-two.box.tab-pane
+                block tab-two 
+              #tab-three.box.tab-pane
+                block tab-three 
+              #tab-four.box.tab-pane
+                block tab-four 
+              #tab-five.box.tab-pane
+                block tab-five
+
+        .col-sm-2
+          block right 
