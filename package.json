@@ -1,7 +1,7 @@
 {
-  "name": "socket-chat-example",
+  "name": "node-jade-example",
   "version": "0.0.1",
-  "description": "my first socket.io app",
+  "description": "my first jade app",
   "dependencies": {
     "express": "4.10.2",
     "jade": "^1.9.2",
